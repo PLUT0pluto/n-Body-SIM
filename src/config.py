@@ -1,0 +1,35 @@
+import pygame
+
+#display
+WINDOW_SIZE = (900, 500)
+CAPTION = "N-Body Simulation"
+UI_TOP_PANEL_HEIGHT = 70
+
+# --- Simulation ---
+# A larger surface for trails so they don't get cut off when moving the camera
+TRAIL_SURFACE_SCALE = 10
+TRAIL_SURF_SIZE = (WINDOW_SIZE[0] * TRAIL_SURFACE_SCALE, WINDOW_SIZE[1] * TRAIL_SURFACE_SCALE)
+DEFAULT_PLANET_MASS = 1000
+DEFAULT_PLANET_RADIUS = 10
+
+# --- Colors ---
+COLOR_BLACK = (0, 0, 0)
+COLOR_WHITE = (255, 255, 255)
+UI_BG_COLOR = (50, 50, 50)
+
+# --- UI Element Rects ---
+BUTTON_SIZE = (50, 50)
+INPUT_SIZE = (60, 50)
+
+START_BUTTON_RECT = pygame.Rect((10, 10), BUTTON_SIZE)
+QUIT_BUTTON_RECT = pygame.Rect((70, 10), BUTTON_SIZE)
+DELETE_BUTTON_RECT = pygame.Rect((700, 10), BUTTON_SIZE)
+RESET_BUTTON_RECT = pygame.Rect((760, 10), BUTTON_SIZE)
+PAUSE_BUTTON_RECT = pygame.Rect((820, 10), BUTTON_SIZE)
+
+POS_X_INPUT_RECT = pygame.Rect((130, 10), INPUT_SIZE)
+POS_Y_INPUT_RECT = pygame.Rect((200, 10), INPUT_SIZE)
+SPEED_X_INPUT_RECT = pygame.Rect((270, 10), INPUT_SIZE)
+SPEED_Y_INPUT_RECT = pygame.Rect((340, 10), INPUT_SIZE)
+MASS_INPUT_RECT = pygame.Rect((410, 10), INPUT_SIZE)
+RADIUS_INPUT_RECT = pygame.Rect((480, 10), INPUT_SIZE)

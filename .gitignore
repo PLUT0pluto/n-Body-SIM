@@ -1,0 +1,11 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Ignore specific folders
+src/render/
+src/ui/
+
+# Ignore specific files
+src/test1.py
+src/main2.py
