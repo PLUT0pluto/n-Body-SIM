@@ -131,7 +131,7 @@ class App:
             self.gui.btnPause.set_text("Unpause" if self.simulation.isPaused else "Pause")
     
     def _handle_text_input(self, uiElement):
-        if self.selected_planet_idx == -1: return
+        if self.selectedPlanet == -1: return
     
         try:
             # Get the index of the input field in the list
@@ -142,7 +142,7 @@ class App:
             # Get the current text and update the simulation
             # No need to sanitize or call set_text() anymore!
             text = uiElement.get_text()
-            self.simulation.update_body_value(self.selected_planet_idx, data_idx, text)
+            self.simulation.update_planet_value(self.selectedPlanet, data_idx, text)
 
         except ValueError:
             # This will now only catch if the element isn't in our list

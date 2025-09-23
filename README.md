@@ -1,16 +1,8 @@
 # n-Body Gravity Simulator
 
-This is a simple n-body gravity simulator built with Python, Pygame, and a C++ extension for the physics calculations. It allows you to create, edit, and delete celestial bodies and watch them interact with each other based on gravitational forces.
+This is a simple n-body gravity simulator built with Python, Pygame, and a C++ module for the physics calculations. It allows you to create, edit, and delete celestial bodies and watch them interact with each other based on gravitational forces.
 
-## Features
-
-*   **Real-time Simulation**: Watch the bodies interact in real-time. 
-*   **C++ Performance**: The core physics calculations are performed in a C++ extension for better performance. The algorithm I used for calculations is RKF45.
-*   **Add and Remove Bodies**: Click to add new bodies, or select and delete existing ones.
-*   **Edit Body Properties**: Select a body to edit its position, velocity, mass, and radius.
-*   **Camera Controls**: Pan the camera to view different parts of the simulation.
-*   **Pause and Reset**: Pause the simulation to inspect the current state, or reset it to the initial conditions.
-*   **Velocity Control**: Drag to set the initial position and right-drag to set the velocity direction of a body.
+I started working on this project in c++ with intent on also using some c++ library for ui. But later I changed my mind and decided I'd rather use python since making ui seemed pretty easy with pygame, plus I haven't written anything in it in a while. This separation of physics and ui also gave me the idea to try multithreading and make c++ physics code run in a separate thread. I haven't tested how much this improves performance, but I mainly did it just to see how multithreading works so I'm pretty happy with it.
 
 
 ## How to Run
@@ -25,7 +17,7 @@ This is a simple n-body gravity simulator built with Python, Pygame, and a C++ e
     python src/main.py
     ```
 
-**Note**: The physics calculation is done by a pre-compiled C++ module that I've made (`nbodysim.cp312-win_amd64.pyd`). I've only worked on this project from windows and python3 and I'm not sure if it runs on other os or other python versions.
+**Note**: The physics calculation is done by a pre-compiled C++ module that I've made (`nbodysim.cp312-win_amd64.pyd`). I've only worked on this project from windows and python3 and I'm not sure if it runs on a different os or other python versions.
 
 ## Controls
 
@@ -44,6 +36,10 @@ This is a simple n-body gravity simulator built with Python, Pygame, and a C++ e
     *   **Reset**: Resets the simulation to its initial state.
     *   **Delete**: Deletes the selected planet.
     *   **Quit**: Exits the application.
+
+## Improvements
+The problem that is really bothering me is the low resolution of text rendering. I think the reason for this is in how pygame detects the resolution of high dpi screens, but the solutions I found on google haven't worked for me. 
+I also have to clean up the c++ code for the physics module and add it to this repositiory. 
 
 ## Structure
 
