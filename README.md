@@ -4,6 +4,9 @@ This is a simple n-body gravity simulator built with Python, Pygame, and a C++ m
 
 I started working on this project in c++ with intent on also using some c++ library for ui. But later I changed my mind and decided I'd rather use python since making ui seemed pretty easy with pygame, plus I haven't written anything in it in a while. This separation of physics and ui also gave me the idea to try multithreading and make c++ physics code run in a separate thread. I haven't tested how much this improves performance, but I mainly did it just to see how multithreading works so I'm pretty happy with it.
 
+<img width="1120" height="773" alt="Screenshot 2025-09-22 141145" src="https://github.com/user-attachments/assets/af0d886b-db4f-401b-a973-6044113afa5a" />
+<img width="1331" height="752" alt="Screenshot 2025-09-22 140849" src="https://github.com/user-attachments/assets/cd731159-b0d3-4f2e-980d-12c12d578a77" />
+
 
 ## How to Run
 
